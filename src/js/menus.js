@@ -78,7 +78,7 @@ handleClick($('.whitelist-btn'),()=>{
 		body: JSON.stringify({"data": {"whitelistaddress":address}}),
 	}).then(res =>{
 		if (res.status === 201){
-			alert('CONGRATULATIONS, You are whitelisted For the $BAIT Presale. - '+address)
+			alert('CONGRATULATIONS, You are whitelisted For the solbzone rewards. - '+address)
 		}
 		else{
 			alert("There was an error :(")
