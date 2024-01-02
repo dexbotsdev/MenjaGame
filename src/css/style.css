@@ -2,9 +2,9 @@ body {
 	margin: 0;
 	background-color: #000;
 	background: #bed6bc;
-background: -moz-radial-gradient(center, ellipse cover,  #bed6bc 0%, #93bb8f 17%, #69a163 33%, #217218 67%, #15490f 83%, #091e06 100%);
-background: -webkit-radial-gradient(center, ellipse cover,  #bed6bc 0%,#93bb8f 17%,#69a163 33%,#217218 67%,#15490f 83%,#091e06 100%);
-background: radial-gradient(ellipse at center,  #bed6bc 0%,#93bb8f 17%,#69a163 33%,#217218 67%,#15490f 83%,#091e06 100%);
+background: -moz-radial-gradient(center, ellipse cover,  #d6bcd4 0%, #bb8fb4 17%, #a1638e 33%, #721866 67%, #430f49 83%, #18061e 100%);
+background: -webkit-radial-gradient(center, ellipse cover,  #d6bcd4 0%, #bb8fb4 17%, #a1638e 33%, #721866 67%, #430f49 83%, #18061e 100%);
+background: radial-gradient(ellipse at center,   #d6bcd4 0%, #bb8fb4 17%, #a1638e 33%, #721866 67%, #430f49 83%, #18061e 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bed6bc', endColorstr='#091e06',GradientType=1 );
 
 	height: 100vh;
