@@ -14,14 +14,14 @@ const gzipSize = require('gzip-size');
 
 
 
-gulp.task('clean', () => del.sync('build'));
+gulp.task('clean', () => del.sync('dist'));
 
 
 // Concat CSS/JS files linked from index.html, and rewrite references.
 gulp.task('combine-files', () => {
 	return gulp.src('src/index.html')
 		.pipe(useref())
-		.pipe(gulp.dest('build'));
+		.pipe(gulp.dest('dist'));
 });
 
 // Special concat for CodePen.
@@ -31,7 +31,7 @@ gulp.task('combine-files-codepen', () => {
 		.pipe(useref({ noconcat: true }))
 		.pipe(filter('**/*.js'))
 		.pipe(concat('combined.js', { newLine: '\r\n'.repeat(5) }))
-		.pipe(gulp.dest('build'));
+		.pipe(gulp.dest('dist'));
 });
 
 
@@ -55,7 +55,7 @@ gulp.task('stripPerfCode', () => {
 
 	return gulp.src('build/combined.js')
 		.pipe(replace(perfFnRegExp, ''))
-		.pipe(gulp.dest('build'));
+		.pipe(gulp.dest('dist'));
 });
 
 
@@ -68,7 +68,7 @@ gulp.task('iife', () => {
 			prependSemicolon: false,
 			bindThis: false
 		}))
-		.pipe(gulp.dest('build'));
+		.pipe(gulp.dest('dist'));
 });
 
 
@@ -87,11 +87,11 @@ gulp.task('inline-minify', () => {
 
 	return gulp.src('build/index.html')
 		.pipe(inline({
-			base: 'build',
+			base: 'dist',
 			js: minifyjs
 		}))
 		.pipe(htmlmin(htmlminOptions))
-		.pipe(gulp.dest('build'));
+		.pipe(gulp.dest('dist'));
 });
 
 
