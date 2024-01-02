@@ -109,8 +109,7 @@ gulp.task('default', callback => {
 
 	runSequence(
 		'clean',
-		'combine-files',
-		'stripPerfCode',
+		'combine-files', 
 		'iife',
 		'inline-minify',
 		'copy-img',
